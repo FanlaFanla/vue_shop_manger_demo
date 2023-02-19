@@ -41,7 +41,6 @@
 </template>
 
 <script>
-import { ElMessage } from 'element-plus'
 export default {
   data () {
     return {
@@ -76,10 +75,10 @@ export default {
         if (!valid) return false
         // this.$axios.post('login', this.loginForm).then(res => console.log(res))
         const { data: res } = await this.$axios.post('login', this.loginForm)
-        if (res.meta.status !== 200) return ElMessage.error('登录失败！')
+        if (res.meta.status !== 200) return this.$message.error('登录失败！')
         window.sessionStorage.setItem('token', res.data.token)
         this.$router.push('/home')
-        ElMessage({
+        this.$message({
           message: '登录成功！',
           type: 'success'
         })
