@@ -6,6 +6,7 @@ import router from './router'
 import './assets/css/global.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import axios from 'axios'
+import { dateFormat } from './assets/js/my.js'
 
 // 引入字体icon
 import './assets/iconfont/iconfont.css'
@@ -20,6 +21,9 @@ axios.interceptors.request.use(config => {
   return config
 })
 app.config.globalProperties.$axios = axios
+
+// 时间格式化
+app.config.globalProperties.$dateFormat = dateFormat
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
