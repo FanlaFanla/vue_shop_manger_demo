@@ -4,21 +4,7 @@
 ```
 npm install
 ```
+##
+db_server文件夹下的压缩包是本地server和sql数据库
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+2023/03/01

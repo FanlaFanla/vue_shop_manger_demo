@@ -128,7 +128,7 @@
 export default {
   data() {
     // 验证输入的邮箱是否合法
-    var validEmail = (rule, value, callback) => {
+    const validEmail = (rule, value, callback) => {
       // 邮箱验证的正则
       const regEmail = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/
       if (regEmail.test(value)) {
@@ -137,7 +137,7 @@ export default {
       callback(new Error('请输入合法的邮箱号'))
     }
     // 验证输入的邮箱是否合法
-    var validMobile = (rule, value, callback) => {
+    const validMobile = (rule, value, callback) => {
       const regMobile = /^(189)[0-9]{8}$/
       if (regMobile.test(value)) {
         return callback()

@@ -34,7 +34,7 @@
                 </el-col>
                 <el-col :span="18">
                   <!-- 渲染三级权限 -->
-                  <el-tag v-for="(item3, i3) in item2.children" :key="item3.id" type="warning" closable
+                  <el-tag v-for="(item3) in item2.children" :key="item3.id" type="warning" closable
                   @close="removeRights(scope.row, item3.id)">{{ item3.authName }}</el-tag>
                 </el-col>
               </el-row>
@@ -167,7 +167,7 @@ export default {
 }
 .el-row{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .el-tag{
   margin: 8px;

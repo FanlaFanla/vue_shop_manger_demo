@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3903535_82tzxj08o4x.css">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title><%= htmlWebpackPlugin.options.isProd ? '' : 'dev-' %>后台</title>
+    <% if(htmlWebpackPlugin.options.isProd){ %>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/element-plus/2.2.32/theme-chalk/base.css">
+    <!-- echarts -->
+    <script crossorigin="anonymous" integrity="sha512-ZYpFIosmEiTC+nL/30hJsFwTKXarRcUQeW1kV97gKOo6xzWhVzHwmEDLRMFceo9ALdXwyVLviVz6vm389kBexQ==" src="https://lib.baomitu.com/echarts/5.4.1/echarts.js"></script>
+    <script src="https://cdn.staticfile.org/quill/1.3.7/quill.js"></script>
+    <script src="https://cdn.staticfile.org/lodash.js/4.17.21/lodash.js"></script>
+    <% } %>
   </head>
   <body>
     <noscript>

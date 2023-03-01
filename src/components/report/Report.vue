@@ -18,6 +18,7 @@
 </template>
 
 <script>
+// 使用CDN服务使用echarts，在index.html引入脚本
 import * as echarts from 'echarts'
 import _ from 'lodash'
 // var myChart
@@ -63,7 +64,7 @@ export default {
   created() {
   },
   async mounted() {
-    var myChart = echarts.init(document.getElementById('echarts'))
+    const myChart = echarts.init(document.getElementById('echarts'))
     const { data: res } = await this.$axios.get('reports/type/1')
     if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
     // 数据合并

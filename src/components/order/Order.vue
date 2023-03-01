@@ -36,7 +36,7 @@
         </template>
       </el-table-column>
       <el-table-column label="操作" width="165px">
-        <template #default="scope">
+        <template #default>
           <el-button type="primary" @click="editBox">修改</el-button>
           <el-button type="success" @click="expressProgress">物流</el-button>
         </template>

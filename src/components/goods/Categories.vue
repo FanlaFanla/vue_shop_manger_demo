@@ -99,7 +99,7 @@
 export default {
   data() {
     // 验证编辑分类名是否与旧名称重复
-    var validEditIput = (rule, value, callback) => {
+    const validEditIput = (rule, value, callback) => {
       if (this.selectedEditCate !== value) {
         return callback()
       }
@@ -335,7 +335,7 @@ export default {
   margin-top: 15px;
   .el-row{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-bottom: 15px;
   }
 }
